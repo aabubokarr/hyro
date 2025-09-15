@@ -1,5 +1,5 @@
-import { Vector } from "../icons/vector";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -15,7 +15,7 @@ export default function Hero() {
           </span>
         </h1>
         <p className="w-[70%]">
-          Discover limitless possibilities in VR. Whether you're gaming,
+          Discover limitless possibilities in VR. Whether you are gaming,
           learning, or exploring, we make every moment feel real.
         </p>
         <div className="flex items-center gap-2">
@@ -23,7 +23,7 @@ export default function Hero() {
         </div>
       </div>
       <div>
-        <img
+        <Image
           src="/images/home.svg"
           className="rounded-[20%] rounded-bl-[50%] border-[12px] border-[#2A2639] m-auto"
           alt="home"
