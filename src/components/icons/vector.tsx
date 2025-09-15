@@ -112,7 +112,7 @@ const Vector = ({
   if (variant === "about") {
     return (
       <svg
-        width="1440"
+        width="1280"
         height="504"
         viewBox="0 0 1440 504"
         fill="none"

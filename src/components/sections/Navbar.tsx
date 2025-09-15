@@ -8,7 +8,7 @@ const gumok = localFont({
 
 export default function Navbar() {
   return (
-    <div className="h-16 flex items-center justify-between w-[95%] m-auto">
+    <div className="h-16 flex items-center justify-between m-auto">
       <div className={`flex items-center gap-2 text-5xl ${gumok.className}`}>
         <Logo></Logo>
         HYRO

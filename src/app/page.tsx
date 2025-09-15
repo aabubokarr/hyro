@@ -8,7 +8,7 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <div className="w-[1440px]">
+    <div className="w-7xl m-auto">
       <Navbar />
       <Hero />
       <About />
