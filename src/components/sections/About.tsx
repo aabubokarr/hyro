@@ -1,10 +1,11 @@
 import { Button } from "../ui/button";
 import { Vector } from "../icons/vector";
 import Image from "next/image";
+import MagicBento from "../animations/MagicBento";
 
 export default function About() {
   return (
-    <div className="mt-24">
+    <div className="mt-24 flex flex-col items-center gap-24">
       <Vector variant="about" className="absolute -z-10"></Vector>
       <div className="flex items-center justify-between">
         <div className="w-1/2">
@@ -36,6 +37,18 @@ export default function About() {
           </div>
         </div>
       </div>
+      <MagicBento
+        textAutoHide={true}
+        enableStars={true}
+        enableSpotlight={true}
+        enableBorderGlow={true}
+        enableTilt={false}
+        enableMagnetism={true}
+        clickEffect={true}
+        spotlightRadius={120}
+        particleCount={12}
+        glowColor="132, 0, 255"
+      />
     </div>
   );
 }
