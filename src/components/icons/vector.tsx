@@ -2,7 +2,7 @@ const Vector = ({
   variant,
   ...props
 }: {
-  variant?: "home-left" | "home-right" | "about" | "used" | "build" | "footer";
+  variant?: "home-left" | "home-right" | "about" | "build" | "footer";
 } & React.ComponentProps<"svg">) => {
   if (variant === "home-left") {
     return (
@@ -163,44 +163,10 @@ const Vector = ({
     );
   }
 
-  if (variant === "used") {
-    return (
-      <svg
-        width="1440"
-        height="820"
-        viewBox="0 0 1440 820"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M-3 231.214C96.569 254.827 300.21 358.641 318.223 584.988C336.235 811.336 680.641 830.311 850.592 811.505C959 791.003 1139.69 689.084 995.192 445.43C850.692 201.775 1230.86 48.9539 1439 3"
-          stroke="url(#paint0_linear_11_14)"
-          stroke-opacity="0.13"
-          stroke-width="6"
-        />
-        <defs>
-          <linearGradient
-            id="paint0_linear_11_14"
-            x1="718"
-            y1="3"
-            x2="718"
-            y2="817"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0.0260417" stop-color="#C0B7E8" />
-            <stop offset="0.265625" stop-color="#C0B7E8" />
-            <stop offset="0.71875" stop-color="#8176AF" />
-            <stop offset="1" stop-color="#343045" />
-          </linearGradient>
-        </defs>
-      </svg>
-    );
-  }
-
   if (variant === "build") {
     return (
       <svg
-        width="1440"
+        width="1380"
         height="169"
         viewBox="0 0 1440 169"
         fill="none"
