@@ -1,4 +1,5 @@
-import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
+import Link from "next/link";
 import { Vector } from "../icons/vector";
 import { LocationIcon } from "../icons/location";
 import { PhoneIcon } from "../icons/phone";
@@ -7,7 +8,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col gap-24">
+    <div id="hero" className="flex flex-col gap-24">
       <Vector
         variant="home-left"
         className="absolute left-0 2xl:left-60"
@@ -31,13 +32,18 @@ export default function Hero() {
             Discover limitless possibilities in VR. Whether you are gaming,
             learning, or exploring, we make every moment feel real.
           </p>
-          <div className="flex items-center gap-2 ">
-            <Button variant="default">Products</Button>
-          </div>
+          <Link
+            href="#products"
+            className={
+              buttonVariants({ variant: "default" }) + " relative z-50"
+            }
+          >
+            Products
+          </Link>
         </div>
         <div>
           <Image
-            src="/images/home.svg"
+            src="/images/hero.png"
             width={500}
             height={500}
             alt="home"

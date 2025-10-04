@@ -14,11 +14,11 @@ export default function Navbar() {
         HYRO
       </div>
       <div className="flex items-center gap-10">
-        <Link href="">Home</Link>
-        <Link href="">About</Link>
-        <Link href="">Products</Link>
-        <Link href="">Build</Link>
-        <Link href="">Contact</Link>
+        <Link href="#hero">Home</Link>
+        <Link href="#about">About</Link>
+        <Link href="#products">Products</Link>
+        <Link href="#build">Build</Link>
+        <Link href="#contact">Contact</Link>
       </div>
     </div>
   );

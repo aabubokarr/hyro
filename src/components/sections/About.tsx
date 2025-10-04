@@ -1,16 +1,17 @@
-import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
+import Link from "next/link";
 import { Vector } from "../icons/vector";
 import Image from "next/image";
 import MagicBento from "../animations/MagicBento";
 
 export default function About() {
   return (
-    <div className="mt-24 flex flex-col items-center gap-24">
+    <div id="about" className="mt-24 scroll-mt-24 flex flex-col items-center gap-24">
       <Vector variant="about" className="absolute -z-10"></Vector>
       <div className="flex items-center justify-between">
         <div className="w-1/2">
           <Image
-            src="/images/about.svg"
+            src="/images/about.png"
             width={350}
             height={350}
             alt="about"
@@ -32,9 +33,14 @@ export default function About() {
             place to meet, learn, and share moments with others. Step into a new
             dimension and see how we are shaping the future of VR.
           </p>
-          <div className="flex items-center gap-2 ">
-            <Button variant="default">Get in Touch</Button>
-          </div>
+          <Link
+            href="#contact"
+            className={
+              buttonVariants({ variant: "default" }) + " relative z-50"
+            }
+          >
+            Get in Touch
+          </Link>
         </div>
       </div>
       <MagicBento

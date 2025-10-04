@@ -6,14 +6,14 @@ import { Vector } from "../icons/vector";
 
 export default function Build() {
   return (
-    <div className="mt-24 flex flex-col items-center gap-24">
+    <div id="build" className="mt-24 scroll-mt-24 flex flex-col items-center gap-24">
       <div className="relative">
         <p className="text-4xl font-light text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <span className="font-bold">TECHNOLOGIES & HARDWARE</span> <br />
           USED BY HYDRA VR.
         </p>
         <Image
-          src="/images/build.svg"
+          src="/images/build.png"
           width={1280}
           height={1280}
           alt="build"
@@ -22,16 +22,16 @@ export default function Build() {
       </div>
       <Marquee gradient gradientColor="#302c42" pauseOnHover>
         <div className="flex items-center gap-20 ml-20">
-          <CompanyIcon name="unreal" className="w-16"></CompanyIcon>
-          <CompanyIcon name="unity" className="w-16"></CompanyIcon>
-          <CompanyIcon name="microsoft" className="w-16"></CompanyIcon>
-          <CompanyIcon name="netflix" className="w-16"></CompanyIcon>
-          <CompanyIcon name="playstation" className="w-16"></CompanyIcon>
-          <CompanyIcon name="facebook" className="w-16"></CompanyIcon>
-          <CompanyIcon name="apple" className="w-16"></CompanyIcon>
-          <CompanyIcon name="google" className="w-16"></CompanyIcon>
-          <CompanyIcon name="xbox" className="w-16"></CompanyIcon>
-          <CompanyIcon name="razer" className="w-16"></CompanyIcon>
+          <CompanyIcon name="unreal" className="w-12"></CompanyIcon>
+          <CompanyIcon name="unity" className="w-12"></CompanyIcon>
+          <CompanyIcon name="microsoft" className="w-12"></CompanyIcon>
+          <CompanyIcon name="netflix" className="w-12"></CompanyIcon>
+          <CompanyIcon name="playstation" className="w-12"></CompanyIcon>
+          <CompanyIcon name="facebook" className="w-12"></CompanyIcon>
+          <CompanyIcon name="apple" className="w-12"></CompanyIcon>
+          <CompanyIcon name="google" className="w-12"></CompanyIcon>
+          <CompanyIcon name="xbox" className="w-12"></CompanyIcon>
+          <CompanyIcon name="razer" className="w-12"></CompanyIcon>
         </div>
       </Marquee>
       <div className="relative">

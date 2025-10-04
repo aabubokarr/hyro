@@ -1,4 +1,4 @@
-# Hyro - Virtual Reality Website
+# Hyro - Portfolio Application
 
 Welcome to the **Hyro** project! This README provides an overview of the project, setup instructions, and other relevant details.
 
@@ -34,7 +34,7 @@ Welcome to the **Hyro** project! This README provides an overview of the project
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/imabu0/hyro.git
+   git clone https://github.com/woabu0/hyro.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -59,8 +59,8 @@ Welcome to the **Hyro** project! This README provides an overview of the project
 ## Contributors
 
 <p align="center">
-  <a href="https://github.com/imabu0/Hyro/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=imabu0/Hyro" alt="Contributors" />
+  <a href="https://github.com/woabu0/hyro/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=woabu0/hyro" alt="Contributors" />
   </a>
 </p>
 

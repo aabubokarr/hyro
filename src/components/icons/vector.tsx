@@ -199,7 +199,7 @@ const Vector = ({
   if (variant === "footer") {
     return (
       <svg
-        width="1440"
+        width="1380"
         height="270"
         viewBox="0 0 1440 270"
         fill="none"
