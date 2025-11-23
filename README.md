@@ -8,7 +8,7 @@ Welcome to the **Hyro** project! This README provides an overview of the project
 - [About](#about)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Structure](#structure)
 - [Contributors](#contributors)
 - [Contributing](#contributing)
 - [License](#license)
@@ -27,6 +27,7 @@ Welcome to the **Hyro** project! This README provides an overview of the project
 - Home
 - About
 - Build
+- Products
 - Contact
 - Footer
 
@@ -45,16 +46,54 @@ Welcome to the **Hyro** project! This README provides an overview of the project
    npm i
    ```
 
-## Usage
+## Structure
 
-1. Start the application:
-   ```bash
-   npm run dev
-   ```
-2. Open your browser and navigate to:
-   ```
-   http://localhost:3000
-   ```
+```
+hyro/
+├── public/
+│   ├── fonts/
+│   │   └── gumok.otf
+│   ├── images/
+│   │   ├── about.png
+│   │   ├── build.png
+│   │   └── hero.png
+│   └── robots.txt
+├── src/
+│   ├── app/
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── animations/
+│   │   │   └── MagicBento.tsx
+│   │   ├── icons/
+│   │   │   ├── company.tsx
+│   │   │   ├── logo.tsx
+│   │   │   ├── social.tsx
+│   │   │   └── vector.tsx
+│   │   ├── sections/
+│   │   │   ├── About.tsx
+│   │   │   ├── Build.tsx
+│   │   │   ├── Contact.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Hero.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   └── Products.tsx
+│   │   └── ui/
+│   │       ├── button.tsx
+│   │       ├── circle.tsx
+│   │       └── input.tsx
+│   └── lib/
+│       └── utils.ts
+├── eslint.config.mjs
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── postcss.config.mjs
+├── tsconfig.json
+└── README.md
+```
 
 ## Contributors
 

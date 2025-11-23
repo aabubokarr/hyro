@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import type { ChangeEvent } from "react";
 
 interface InputProps {
   label?: string;
@@ -8,7 +8,7 @@ interface InputProps {
   placeholder?: string;
   value?: string;
   onChange?: (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
   name?: string;
   required?: boolean;
@@ -17,7 +17,7 @@ interface InputProps {
   rows?: number; // optional rows for textarea
 }
 
-const Input: React.FC<InputProps> = ({
+const Input = ({
   label,
   type = "text",
   placeholder = "",
@@ -28,7 +28,7 @@ const Input: React.FC<InputProps> = ({
   className = "",
   textarea = false,
   rows = 4,
-}) => {
+}: InputProps) => {
   return (
     <div className="w-full flex flex-col gap-2">
       {label && (
@@ -41,23 +41,23 @@ const Input: React.FC<InputProps> = ({
         <textarea
           id={name}
           name={name}
-          value={value}
+          value={value || ""}
           onChange={onChange}
           placeholder={placeholder}
           required={required}
           rows={rows}
-          className={`p-3 outline-none rounded-lg border border-gray-200 focus:border-gray-400 focus:ring-0 transition-all resize-none ${className}`}
+          className={`p-2 sm:p-3 text-sm sm:text-base outline-none rounded-lg border border-purple-light/50 focus:border-purple-light focus:ring-0 transition-all resize-none bg-transparent text-white placeholder:text-gray-500 ${className}`}
         />
       ) : (
         <input
           id={name}
           name={name}
           type={type}
-          value={value}
+          value={value || ""}
           onChange={onChange}
           placeholder={placeholder}
           required={required}
-          className={`h-10 px-3 outline-none rounded-lg border border-gray-200 focus:border-gray-400 focus:ring-0 transition-all ${className}`}
+          className={`h-9 sm:h-10 px-2 sm:px-3 text-sm sm:text-base outline-none rounded-lg border border-purple-light/50 focus:border-purple-light focus:ring-0 transition-all bg-transparent text-white placeholder:text-gray-500 ${className}`}
         />
       )}
     </div>

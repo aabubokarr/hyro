@@ -1,77 +1,47 @@
 import { buttonVariants } from "../ui/button";
 import Link from "next/link";
 import { Vector } from "../icons/vector";
-import { LocationIcon } from "../icons/location";
-import { PhoneIcon } from "../icons/phone";
-import { MailIcon } from "../icons/mail";
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div id="hero" className="flex flex-col gap-24">
+    <div id="hero" className="flex flex-col gap-12 md:gap-16 lg:gap-24 relative px-4 md:px-6 lg:px-8">
       <Vector
-        variant="home-left"
-        className="absolute left-0 2xl:left-60"
+        variant="home"
+        className="hidden lg:block absolute left-0 2xl:left-60 -z-10"
       ></Vector>
-      <Vector
-        variant="home-right"
-        className="absolute right-0 2xl:right-60 top-0 -z-10"
-      ></Vector>
-      <div className="flex items-center justify-between mt-28 m-auto">
-        <div className="flex flex-col items-start justify-center gap-10">
-          <h1 className="text-5xl font-bold">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between mt-12 md:mt-20 lg:mt-28 gap-8 lg:gap-12 m-auto w-full max-w-7xl">
+        <div className="flex flex-col items-center lg:items-start justify-center gap-6 md:gap-8 lg:gap-10 w-full lg:w-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left">
             <span className="bg-gradient-to-r from-purple-light to-purple-dark bg-clip-text text-transparent">
               Dive
             </span>{" "}
-            Into The Depths <br /> Of{" "}
+            Into The Depths <br className="hidden sm:block" /> Of{" "}
             <span className="bg-gradient-to-r from-purple-light to-purple-dark bg-clip-text text-transparent">
               Virtual Reality
             </span>
           </h1>
-          <p className="w-[70%]">
+          <p className="w-full lg:w-[70%] text-sm md:text-base lg:text-lg text-center lg:text-left text-gray-300">
             Discover limitless possibilities in VR. Whether you are gaming,
             learning, or exploring, we make every moment feel real.
           </p>
           <Link
             href="#products"
             className={
-              buttonVariants({ variant: "default" }) + " relative z-50"
+              buttonVariants({ variant: "default" }) + " relative z-50 w-3/4 max-w-[200px] sm:w-auto sm:max-w-none mx-auto sm:mx-0 px-6 py-2.5 sm:px-8 sm:py-2.5 md:px-10 md:py-3 text-sm sm:text-base text-center"
             }
           >
             Products
           </Link>
         </div>
-        <div>
+        <div className="w-full lg:w-auto flex justify-center">
           <Image
             src="/images/hero.png"
             width={500}
             height={500}
             alt="home"
-            className="rounded-[20%] rounded-bl-[50%] border-[12px] border-[#2A2639] m-auto"
+            className="rounded-[20%] rounded-bl-[50%] border-4 md:border-8 lg:border-[12px] border-[#2A2639] m-auto w-[280px] sm:w-[350px] md:w-[400px] lg:w-[550px] xl:w-[650px] 2xl:w-[750px] h-auto object-cover"
           />
-        </div>
-      </div>
-      <div className="flex items-center h-32 py-4 bg-[#3A3456] rounded-[90px]">
-        <div className="flex items-center justify-center gap-2  w-1/3 border-r-[.5px] border-r-purple-light h-full">
-          <LocationIcon></LocationIcon>
-          <div>
-            <h1 className="font-bold">Pay Us a Visit</h1>
-            <p>Dhaka, Bangladesh</p>
-          </div>
-        </div>
-        <div className="flex items-center justify-center gap-2 w-1/3 border-r-[.5px] border-r-purple-light h-full">
-          <PhoneIcon></PhoneIcon>
-          <div>
-            <h1 className="font-bold">Give Us a Call</h1>
-            <p>017 1111 2222</p>
-          </div>
-        </div>
-        <div className="flex items-center justify-center gap-2  w-1/3">
-          <MailIcon></MailIcon>
-          <div>
-            <h1 className="font-bold">Send Us a Message</h1>
-            <p>contact@hyro.com</p>
-          </div>
         </div>
       </div>
     </div>

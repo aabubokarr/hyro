@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { gsap } from "gsap";
@@ -533,7 +532,7 @@ const BentoCardGrid: React.FC<{
   gridRef?: React.RefObject<HTMLDivElement | null>;
 }> = ({ children, gridRef }) => (
   <div
-    className="bento-section grid gap-2 p-3 max-w-[54rem] select-none relative"
+    className="bento-section grid gap-2 p-3 max-w-[54rem] select-none relative mx-auto"
     style={{ fontSize: "clamp(1rem, 0.9rem + 0.5vw, 1.5rem)" }}
     ref={gridRef}
   >
@@ -593,36 +592,39 @@ const MagicBento: React.FC<BentoProps> = ({
           }
           
           .card-responsive {
-            grid-template-columns: 1fr;
-            width: 90%;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
             margin: 0 auto;
-            padding: 0.5rem;
+            padding: 0.25rem;
+            gap: 0.25rem;
           }
           
-          @media (min-width: 600px) {
+          .card-responsive .card:nth-child(3) {
+            grid-column: span 2;
+            grid-row: span 2;
+          }
+          
+          .card-responsive .card:nth-child(4) {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 2;
+          }
+          
+          .card-responsive .card:nth-child(6) {
+            grid-column: 4;
+            grid-row: 3;
+          }
+          
+          @media (min-width: 640px) {
             .card-responsive {
-              grid-template-columns: repeat(2, 1fr);
+              padding: 0.5rem;
+              gap: 0.5rem;
             }
           }
           
           @media (min-width: 1024px) {
             .card-responsive {
-              grid-template-columns: repeat(4, 1fr);
-            }
-            
-            .card-responsive .card:nth-child(3) {
-              grid-column: span 2;
-              grid-row: span 2;
-            }
-            
-            .card-responsive .card:nth-child(4) {
-              grid-column: 1 / span 2;
-              grid-row: 2 / span 2;
-            }
-            
-            .card-responsive .card:nth-child(6) {
-              grid-column: 4;
-              grid-row: 3;
+              padding: 0.75rem;
+              gap: 0.5rem;
             }
           }
           
@@ -687,17 +689,47 @@ const MagicBento: React.FC<BentoProps> = ({
             text-overflow: ellipsis;
           }
           
-          @media (max-width: 599px) {
+          @media (max-width: 639px) {
             .card-responsive {
-              grid-template-columns: 1fr;
-              width: 90%;
-              margin: 0 auto;
-              padding: 0.5rem;
+              padding: 0.25rem;
+              gap: 0.25rem;
             }
             
             .card-responsive .card {
-              width: 100%;
-              min-height: 180px;
+              min-height: 120px;
+              padding: 0.75rem;
+            }
+            
+            .card-responsive .card .card__label {
+              font-size: 0.625rem;
+            }
+            
+            .card-responsive .card .card__title {
+              font-size: 0.75rem;
+            }
+            
+            .card-responsive .card .card__description {
+              font-size: 0.625rem;
+              line-height: 1.2;
+            }
+          }
+          
+          @media (min-width: 640px) and (max-width: 1023px) {
+            .card-responsive .card {
+              min-height: 150px;
+              padding: 1rem;
+            }
+            
+            .card-responsive .card .card__label {
+              font-size: 0.75rem;
+            }
+            
+            .card-responsive .card .card__title {
+              font-size: 0.875rem;
+            }
+            
+            .card-responsive .card .card__description {
+              font-size: 0.7rem;
             }
           }
         `}
@@ -716,7 +748,7 @@ const MagicBento: React.FC<BentoProps> = ({
       <BentoCardGrid gridRef={gridRef}>
         <div className="card-responsive grid gap-2">
           {cardData.map((card, index) => {
-            const baseClassName = `card flex flex-col justify-between relative aspect-[4/3] min-h-[200px] w-full max-w-full p-5 rounded-[20px] border-[2px] border-solid font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${
+            const baseClassName = `card flex flex-col justify-between relative aspect-[4/3] min-h-[120px] sm:min-h-[150px] md:min-h-[180px] lg:min-h-[200px] w-full max-w-full p-3 sm:p-4 md:p-5 rounded-[12px] sm:rounded-[16px] md:rounded-[20px] border-[1px] sm:border-[1.5px] md:border-[2px] border-solid font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${
               enableBorderGlow ? "card--border-glow" : ""
             }`;
 

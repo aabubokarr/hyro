@@ -7,8 +7,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Hyro",
-  description: "Welcome to the future of VR",
+  title: "Hyro - Immersive Virtual Reality Experiences",
+  description: "Discover limitless possibilities in virtual reality with Hyro. Explore immersive worlds, play interactive games, and connect with people worldwide. Experience smooth, realistic, and engaging VR whether you're a beginner or an expert. Step into a new dimension and see how we're shaping the future of VR.",
 };
 
 export default function RootLayout({

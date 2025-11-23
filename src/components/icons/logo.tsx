@@ -21,8 +21,8 @@ const Logo = ({ className, ...props }: React.ComponentProps<"svg">) => (
         y2="102.927"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#C0B7E8" />
-        <stop offset="1" stop-color="#8176AF" />
+        <stop stopColor="#C0B7E8" />
+        <stop offset="1" stopColor="#8176AF" />
       </linearGradient>
     </defs>
   </svg>
