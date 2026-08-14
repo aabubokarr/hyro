@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Vector } from "../icons/vector";
 import Image from "next/image";
 import MagicBento from "../animations/MagicBento";
+import { BASE_PATH } from "@/lib/config";
 
 export default function About() {
   return (
@@ -11,7 +12,7 @@ export default function About() {
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full max-w-7xl">
         <div className="w-full lg:w-1/2 flex justify-center">
           <Image
-            src="/images/about.png"
+            src={`${BASE_PATH}/images/about.png`}
             width={350}
             height={350}
             alt="about"

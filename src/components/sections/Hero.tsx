@@ -2,6 +2,7 @@ import { buttonVariants } from "../ui/button";
 import Link from "next/link";
 import { Vector } from "../icons/vector";
 import Image from "next/image";
+import { BASE_PATH } from "@/lib/config";
 
 export default function Hero() {
   return (
@@ -36,7 +37,7 @@ export default function Hero() {
         </div>
         <div className="w-full lg:w-auto flex justify-center">
           <Image
-            src="/images/hero.png"
+            src={`${BASE_PATH}/images/hero.png`}
             width={500}
             height={500}
             alt="home"

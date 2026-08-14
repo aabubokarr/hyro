@@ -2,6 +2,7 @@ import Image from "next/image";
 import { CompanyIcon } from "../icons/company";
 import Marquee from "react-fast-marquee";
 import Circle from "../ui/circle";
+import { BASE_PATH } from "@/lib/config";
 
 export default function Build() {
   return (
@@ -9,7 +10,7 @@ export default function Build() {
       <div className="relative w-full max-w-4xl flex items-center justify-center">
         <div className="relative w-full flex items-center justify-center">
           <Image
-            src="/images/build.png"
+            src={`${BASE_PATH}/images/build.png`}
             width={1280}
             height={1280}
             alt="build"
