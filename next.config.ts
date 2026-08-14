@@ -4,6 +4,7 @@ const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  output: "export",
   basePath: isGitHubPages ? "/hyro" : "",
   devIndicators: false,
   images: {
